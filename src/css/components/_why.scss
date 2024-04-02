@@ -1,0 +1,121 @@
+
+.why__topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(49px);
+}
+
+.why__title {
+    margin-bottom: rem(17px);
+    @include phones {
+font-size: rem(40px);
+line-height: rem(36px);
+margin-bottom: rem(9px);
+    }
+}
+
+    .why__subtitle {
+    color:$subtitle;
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: rem(22px); 
+    text-align: center;
+    max-width: rem(500px);
+    white-space: normal;
+}
+
+    .why__list {
+        display: flex;
+        @include phones {
+            flex-direction: column;
+        }
+    }
+
+.why__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: rem(56px);
+        position: relative;
+@include phones{
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: rem(31px);
+    &:last-child {
+        margin-bottom: 0;
+    } 
+    
+}
+    &:last-child{
+        margin-right: 0;
+
+        &::before{
+            display: none;
+            }
+        }
+            &::before{
+                content: url(./img/dot1.png);
+                position: absolute;
+                top: rem(58px);
+                right: rem(-22px);
+                transform: translateX(50%);
+                @include tablets {
+                    display: none;
+                }
+            }
+    }
+    
+    .why__img-box{
+        background: url(./img/circle.png)no-repeat;
+        min-width: rem(128px);
+        height: rem(128px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: rem(20px);
+        @include phones {
+            margin: 0 rem(12px) 0 0;
+        }
+    }
+    
+    .why__img {
+    display: block;
+    width: rem(68px);
+    height: rem(68px);
+    
+    }
+    
+    
+    .why__content {
+        display: flex;
+        flex-direction: column;
+        @include phones {
+            align-items: flex-start;
+        }
+    }
+    .why__content-title {
+    color: $header;
+    font-size: rem(27px);
+    font-weight: 700;
+    line-height: rem(32px);
+    text-align: center;
+    margin-bottom: rem(20px);
+    @include tablets{
+        margin-bottom: rem(7px);
+    }
+    @include phones {
+        margin-bottom: rem(10px);
+    }
+    }
+    .why__content-about {
+    color:$subtitle;
+    font-size: rem(18px);
+    font-weight: 300;
+    line-height: rem(22px);
+    text-align: center;
+    @include phones {
+        text-align: start;
+    }
+    }
+    

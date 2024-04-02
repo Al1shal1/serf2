@@ -1,0 +1,42 @@
+.fixed-menu {
+    position: fixed;
+    top: 20%;
+    right: 3%;
+    @include tablets{
+        display: none;
+    }
+}
+
+.fixed-menu__item {
+    margin-bottom: rem(7px);
+    &:last-child{
+        margin-bottom: 0;
+    }
+    &.is-active{
+        .fixed-menu__link {
+            border-color: $white;
+        }
+
+    }
+}
+
+.fixed-menu__link {
+    width: rem(19px);
+    height: rem(19px);
+    border-radius: 50%;
+    border: rem(1px) solid transparent;
+    display: block;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        width: rem(9px);
+        height: rem(9px);
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

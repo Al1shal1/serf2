@@ -1,0 +1,197 @@
+
+.order__form {
+    background: url(./img/cta.png) no-repeat;
+    background-size: cover;
+    }
+    
+    .order__title {
+    color: $white;
+    font-size: rem(48px);
+    font-weight: 700;
+    line-height: rem(58px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: rem(61px);
+    @include tablets{
+        margin-bottom: rem(30px);
+    }
+    }
+    .form {
+        display: flex;
+        @include tablets {
+            flex-direction: column;
+            padding: 0 17.5%;
+        }
+        @include phones{
+            padding: 0;
+        }
+    }
+    .form__col {
+        flex: 1;
+        margin-right: rem(27px);
+        &:last-child{
+            margin-right: 0;
+        }
+        @include tablets{
+            margin-right: 0;
+        }
+    }
+    .form__row {
+        display: flex;
+        margin-bottom: rem(14px);
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &--right{
+            margin-bottom: rem(36px);
+            @include tablets{
+                margin-top: rem(15px);
+                margin-bottom: rem(20px);
+            }
+        }
+    }
+    
+
+.form__block {
+    flex: 1;
+    margin-right: rem(17px);
+    color: $white;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.form__caption {
+color: $white;
+font-size: rem(18px);
+font-weight: 400;
+line-height: rem(22px);
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    padding: rem(18px) rem(20px) rem(16px) rem(12px);
+    border: rem(3px) solid transparent;
+    border-radius: rem(4px);
+    &:focus{
+        border-color:$yel;
+        outline: none;
+    }
+    @include tablets{
+        max-height: rem(36px);
+    }
+}
+.form__input--textarea {
+    height: rem(153px);
+    resize: none;
+    @include tablets{
+        min-height: rem(82px);
+    }
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 rem(47px) rem(6px);
+    @include tablets{
+        margin-left: 0;
+        margin-bottom: rem(39px);
+    }
+    @include phones{
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+.form__radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    margin-right: rem(18px);
+    align-items: flex-start;
+    margin-bottom: rem(16px);
+    @include tablets{
+        margin-bottom: rem(21px);
+
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+    &--checkbox{
+        margin-bottom: 0;
+        .radio__visible{
+            border-radius: rem(4px);
+            &::before{
+                background: url(./img/check.png) center center no-repeat;
+                
+            }
+        }
+    }
+}
+
+.radio__visible {
+    width: rem(25px);
+    height: rem(25px);
+    position: relative;
+    border-radius: 50%;
+    background: $white;
+    margin-right: rem(10px);
+    &::before {
+        content: "";
+        width: rem(13px);
+        height: rem(13px);
+        background: $yel;
+        border-radius: 50%;
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+}
+.radio__title {
+color: $white;
+font-size: rem(18px);
+font-weight: 400;
+line-height: rem(22px);
+}
+.radio__elem {
+    display: none;
+    &:checked ~ .radio__visible {
+        &::before{
+            display: block;
+        }
+    }
+}
+.form__button {
+    display: flex;
+    @include tablets{
+        justify-content: center;
+    }
+}
+.btn__form{
+    border: none;
+    cursor: pointer;
+    margin-right: rem(22px);
+    @include phones {
+font-size: rem(16px);
+margin-right: rem(33px);
+    }
+    
+}
+
+.btn__form--transp{
+    background: transparent;
+    border: none;
+    color: $white;
+font-size: rem(18px);
+font-weight: 400;
+line-height: rem(22px);
+text-transform: none;
+padding: 0;
+cursor: pointer;
+&:hover{
+    color: $yelhov;
+    background: transparent;
+}
+}

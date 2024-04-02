@@ -1,0 +1,19 @@
+.button {
+    background: $yel;
+    border-radius: rem(100px);
+    padding: rem(21px) rem(41px);
+    color: $black;
+    font-size: rem(16px);
+    font-weight: 800;
+    line-height: rem(18px);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s;
+    &:hover{
+        background: $yelhov;
+    }
+    @include phones {
+        font-size: rem(19px);
+        }
+    }
+    
