@@ -58,7 +58,9 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    &--left{
+        margin-right: 58px;
+    }
 }
 .slider__img {
     width: rem(420px);
