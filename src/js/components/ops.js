@@ -126,8 +126,6 @@ if(isMobile){
             ) {
                 if (direction == "up") scrollToPage('up');
                 if (direction == "down") scrollToPage('down');
-    
-                scrollToPage();
             },
         });
         });
