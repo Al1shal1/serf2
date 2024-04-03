@@ -48,6 +48,17 @@ task('styles', () => {
         .pipe(dest('dist'));
 });
 
+task('stylesSrc', () => {
+    return src(styles)
+        .pipe(gulpif(env === 'dev', sourcemaps.init()))
+        .pipe(concat('main.scss'))
+        .pipe(sassGlob())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulpif(env === 'prod', cleanCSS()))
+        .pipe(gulpif(env === 'dev', sourcemaps.write()))
+        .pipe(dest('src'));
+});
+
 
 task('scripts', () => {
     return src('src/js/**/*')
@@ -60,4 +71,4 @@ task('img', () => {
 });
 
 watch('./src/styles/**/*.scss', series('styles'));
-task('default', series('clean', parallel('copy:html','img','copy:svg','copy:video', 'styles', 'scripts') )); 
+task('default', series('clean', parallel('copy:html','img','copy:svg','copy:video', 'styles', 'stylesSrc','scripts') )); 
