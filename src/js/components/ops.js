@@ -5,6 +5,8 @@ let onePageScroll = () =>{
     const points = document.querySelectorAll('.fixed-menu__item');
     const dataScrollto = document.querySelectorAll('[data-scroll-to]');
     
+    let fixlist = document.querySelector('.fixed-menu__list');
+
     let inScroll = false;
     
     addNavigation();
@@ -94,6 +96,17 @@ let onePageScroll = () =>{
     function scrollToPage(direct){
         let page = definePage(pages);
 
+        const data = page.iterActive.dataset.color;
+        
+        console.log(data)
+
+        if(data == "white"){
+            fixlist.classList.add("fixed-menu__list--shadow");
+        }else{
+            fixlist.classList.remove("fixed-menu__list--shadow");
+        }
+
+
         if (direct === 'up' && page.iterNext) {
         let numPage = page.iterIndex + 1;
         doTransition(numPage);
@@ -130,26 +143,6 @@ if(isMobile){
         });
 }
 
-///////////////////////////
-    
-let fixColor = document.querySelector('.fixed-menu__link');
-let contentB = getComputedStyle(fixColor, '::before');
-const active = document.querySelectorAll('.is-active');
-
-function fixmenuColor () {
-    if($(pages).hasClass("is-active")){
-    const data = pages.dataset.color;
-    }
-
-    if($(points).hasClass("is-active")){
-        points.active.css(" border-color", "#000");
-    }
-    if(data == "black"){
-        $(contentB).css("background-color", "#000");
-    }else{
-        $(contentB).css("background-color", "#FFF");
-    }
-}
     }
     
     onePageScroll();

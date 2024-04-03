@@ -6,6 +6,11 @@
         display: none;
     }
 }
+.fixed-menu__list--shadow{
+        background: rgb(0, 0, 0);
+        border-radius: 5px;
+}
+
 
 .fixed-menu__item {
     margin-bottom: rem(7px);
