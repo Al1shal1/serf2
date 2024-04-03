@@ -97,8 +97,7 @@ let onePageScroll = () =>{
         let page = definePage(pages);
 
         const data = page.iterActive.dataset.color;
-
-        console.log(data)
+        
 
         if(data == "white"){
             fixlist.classList.add("fixed-menu__list--shadow");
