@@ -5,7 +5,7 @@ let onePageScroll = () =>{
     const points = document.querySelectorAll('.fixed-menu__item');
     const dataScrollto = document.querySelectorAll('[data-scroll-to]');
     
-    let fixlist = document.querySelector('.fixed-menu__list');
+    const fixlist = document.querySelector('.fixed-menu__list');
 
     let inScroll = false;
     
@@ -97,11 +97,12 @@ let onePageScroll = () =>{
         let page = definePage(pages);
 
         const data = page.iterActive.dataset.color;
-        
+
         console.log(data)
 
         if(data == "white"){
             fixlist.classList.add("fixed-menu__list--shadow");
+
         }else{
             fixlist.classList.remove("fixed-menu__list--shadow");
         }

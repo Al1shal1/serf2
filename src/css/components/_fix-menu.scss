@@ -6,9 +6,13 @@
         display: none;
     }
 }
-.fixed-menu__list--shadow{
-        background: rgba(0, 0, 0,0.3);
+.fixed-menu__list{
+    transition: 0.3s;
+}
+.fixed-menu__list.fixed-menu__list--shadow{
+        background: rgba(0, 0, 0, 0.3);
         border-radius: 5px;
+
 }
 
 
