@@ -24,7 +24,6 @@ $('.team__name').click(e =>{
 
     if(elemContainer.hasClass("team__item--active")) {
         closeEveryItem(container);
-        img.toggleClass("team__name-icon--right")
     }else{
         closeEveryItem(container);
         openItem($this);

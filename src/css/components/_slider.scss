@@ -60,6 +60,9 @@ width: 100%;
     align-items: center;
     &--left{
         margin-right: 58px;
+        @include tablets{
+            margin: 0;
+        }
     }
 }
 .slider__img {

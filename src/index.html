@@ -96,7 +96,6 @@
                 </div>
             </section>
             <section class="section why" data-color="white">
-                <main class="main">
                 <div class="container">
                     <div class="why__topic">
                         <h2 class="why__title title">почему Surfboard?</h2>
@@ -519,7 +518,7 @@
                         </li>
                     </ul>
                 </div>
-            </section> 
+            </section>
             <section class="section product-menu" data-color="black">
                 <h2 class="product-menu__title title">Меню</h2>
                 <ul class="product-menu__list">
@@ -659,12 +658,12 @@
                 <div class="container player__container">
                     <div class="player__title title">как мы работаем</div>
                     <div class="player-section__container">
-                            <div class="player__video ">
-                                <video id="video" poster="./img/player-bg.png">
-                                    <source type="video/mp4" src="./1140b91d-06d2-4f73-ab0a-43779e7d0277.mp4">
-                                </video>
-                                <img src="./img/bigPlay.png" alt="" class="video__play play">
-                            </div>
+                        <div class="player__video ">
+                            <video id="video" poster="./img/player-bg.png">
+                                <source type="video/mp4" src="./1140b91d-06d2-4f73-ab0a-43779e7d0277.mp4">
+                            </video>
+                            <img src="./img/bigPlay.png" alt="" class="video__play play">
+                        </div>
 
                         <div class="player__controls">
                             <div class="duration">
@@ -674,7 +673,8 @@
                             <div class="sound">
                                 <img src="./img/value.png" alt="" class="sound__icon" id="micLevel">
                                 <div class="sound__volume">
-                                    <input type="range" id="volumeLevel" class="duration__length duration__length--other" min="0"  max="10">
+                                    <input type="range" id="volumeLevel"
+                                        class="duration__length duration__length--other" min="0" max="10">
                                 </div>
                             </div>
                         </div>
@@ -757,7 +757,6 @@
                         </div>
                     </form>
                 </div>
-            </main>
             </section>
             <section class="section map-section" data-color="white">
                 <div id="map"></div>
@@ -793,83 +792,80 @@
                     </div>
                 </footer>
             </section>
-    
         </div>
-
-    
-    <div class="modal" id="modal">
-        <div class="modal__container">
-            <div class="modal__content">
-                <div class="modal__messange">Cообщение отправлено</div>
-                <a href="#" class="button modal__btn js--submit">ЗАКРЫТЬ</a>
+            <div class="modal" id="modal">
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__messange">Cообщение отправлено</div>
+                        <a href="#" class="button modal__btn js--submit">ЗАКРЫТЬ</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-        <nav class="fixed-menu">
-            <ul class="fixed-menu__list">
-                <li class="fixed-menu__item is-active">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="0"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="1"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="2"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="3"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="4"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="5"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="6"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="7"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link" data-scroll-to="8"></a>
-                </li>
-            </ul>
-        </nav>
-        <a href="#" class="hamburger" id="burger">
-            <span class="hamburger__plank"></span>
-            <span class="hamburger__plank"></span>
-            <span class="hamburger__plank"></span>
-        </a>
-        <div class="overlay" id="overlay">
-            <div class="overlay__menu" id="overlay__menu">
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">О нас</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">Серфборды</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">Команда</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">Меню</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">Отзывы</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">Как мы работаем</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__title">Контакты </a>
-                        </li>
-                    </ul>
-                </nav>
+            <nav class="fixed-menu">
+                <ul class="fixed-menu__list">
+                    <li class="fixed-menu__item is-active">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="0"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="1"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="2"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="3"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="4"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="5"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="6"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="7"></a>
+                    </li>
+                    <li class="fixed-menu__item">
+                        <a href="#" class="fixed-menu__link" data-scroll-to="8"></a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="hamburger" id="burger">
+                <span class="hamburger__plank"></span>
+                <span class="hamburger__plank"></span>
+                <span class="hamburger__plank"></span>
+            </a>
+            <div class="overlay" id="overlay">
+                <div class="overlay__menu" id="overlay__menu">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">О нас</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">Серфборды</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">Команда</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">Меню</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">Отзывы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">Как мы работаем</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__title">Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
     </div>
 
     <script src="./js/jquery-3.7.1.min.js"></script>
@@ -886,10 +882,6 @@
     <script src="./js/components/map.js"></script>
     <script src="./js/components/player.js"></script>
     <script src="./js/components/ops.js"></script>
-
-
-
-
 
 </body>
 

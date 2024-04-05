@@ -5,13 +5,14 @@ let onePageScroll = () =>{
     const points = document.querySelectorAll('.fixed-menu__item');
     const dataScrollto = document.querySelectorAll('[data-scroll-to]');
     
-    const fixlist = document.querySelector('.fixed-menu__list');
+    const fixMenu = document.querySelector('.fixed-menu');
 
     let inScroll = false;
     
     addNavigation();
     wheel();
     keyPush();
+    getStyleMenu(pages[0]);
     
     //   функция прокрутки к нужной странице
     function doTransition(pageNumber){
@@ -55,7 +56,6 @@ let onePageScroll = () =>{
     function wheel() {
         document.addEventListener('wheel', e => {
         const direct = e.deltaY > 0 ? 'up' : 'down';
-        
         scrollToPage(direct);
         })
     }
@@ -96,28 +96,33 @@ let onePageScroll = () =>{
     function scrollToPage(direct){
         let page = definePage(pages);
 
-        const data = page.iterActive.dataset.color;
-        
-
-        if(data == "white"){
-            fixlist.classList.add("fixed-menu__list--shadow");
-
-        }else{
-            fixlist.classList.remove("fixed-menu__list--shadow");
-        }
-
-
         if (direct === 'up' && page.iterNext) {
         let numPage = page.iterIndex + 1;
+
+        getStyleMenu(page.iterNext);
+        
         doTransition(numPage);
         }
     
         if (direct === 'down' && page.iterPrev) {
         let numPage = page.iterIndex - 1;
+
+        getStyleMenu(page.iterPrev);
+
         doTransition(numPage);
         }
     }
 
+    function getStyleMenu(page) {
+        const dataColor = page.dataset.color;
+
+        if(dataColor == "white"){
+            fixMenu.classList.add("fixed-menu--shadow");
+
+        }else{
+            fixMenu.classList.remove("fixed-menu--shadow");
+        }
+    }
 
 //mobile-ops
 

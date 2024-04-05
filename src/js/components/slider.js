@@ -1,6 +1,7 @@
 const slider = $(".slider__list").bxSlider({
     pager: false,
-    controls:false
+    controls:false,
+    slideMargin: 30
 });
 
 $('.slider__switch--left').click(e =>{
