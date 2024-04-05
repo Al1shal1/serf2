@@ -59,7 +59,7 @@ width: 100%;
     justify-content: center;
     align-items: center;
     &--left{
-        margin-right: 58px;
+        margin-right: rem(58px);
         @include tablets{
             margin: 0;
         }
